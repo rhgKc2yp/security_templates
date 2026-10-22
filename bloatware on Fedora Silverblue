@@ -1,0 +1,1 @@
+rpm-ostree override remove anthy-unicode firefox-langpacks firefox gnome-system-monitor gnome-tour ibus-anthy-python ibus-anthy ibus-hangul kasumi-unicode kasumi-common libhangul malcontent-ui-libs malcontent-control open-vm-tools-desktop open-vm-tools yelp yelp-libs yelp-xsl
