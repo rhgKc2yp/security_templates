@@ -1,0 +1,25 @@
+sudo rpm-ostree kargs \
+                        --append-if-missing=hash_pointers=always \
+                        --append-if-missing=init_on_alloc=1 \
+                        --append-if-missing=init_on_free=1 \
+                        --append-if-missing=iommu.passthrough=0 \
+                        --append-if-missing=iommu.strict=1 \
+                        --append-if-missing=page_alloc.shuffle=1 \
+                        --append-if-missing=proc_mem.force_override=ptrace \
+                        --append-if-missing=pti=on \
+                        --append-if-missing=randomize_kstack_offset=on \
+                        --append-if-missing=random.trust_bootloader=off \
+                        --append-if-missing=random.trust_cpu=off \
+                        --append-if-missing=slab_nomerge \
+                        --append-if-missing=spec_store_bypass_disable=on \
+                        --append-if-missing=spectre_v2=on \
+                        --append-if-missing=vdso32=0 \
+                        --append-if-missing=vsyscall=none \
+                        --append-if-missing=systemd.ssh_auto=no
+
+
+
+                        # Nvidia only
+                        --append-if-missing=rd.driver.blacklist=nouveau \
+                        --append-if-missing=modprobe.blacklist=nouveau \
+                        --append-if-missing=nvidia-drm.modeset=1
